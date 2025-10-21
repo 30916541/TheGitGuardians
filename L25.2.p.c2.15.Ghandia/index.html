@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="libroForm">
+        <h3 style="width: 250px;">Libro: <span id="libroForm_lblTipo"></span></h3>
+        <label>
+            Codigo:
+            <input type="text" id="libroForm_inCodigo">
+        </label>
+        <label>
+            Precio:
+            <input type="number" id="libroForm_inPrecio">
+        </label>
+        <label hidden id="libroForm_divInSaga">
+            Saga:
+            <input type="text" id="libroForm_inSaga">
+        </label>
+        <label hidden id="libroForm_divInIlustrado">
+            Ilustrado:
+            <input type="text" id="libroForm_inIlustrado">
+        </label>
+        <div>
+            <button id="libroForm_btAceptarLibroNino">Aceptar</button>
+            <button id="libroForm_btAceptarLibroAdolescente">Aceptar</button>
+            <button id="libroForm_btCancelar">Cancelar</button>
+        </div>
+    </section>
+    <section id="mainForm">
+        <h3>Libros Procesados</h3>
+        <table>
+            <thead>
+                <th>Codigo</th>
+                <th>Tipo</th>
+                <th>Precio</th>
+                <th>Ilustrado</th>
+                <th>Saga</th>
+                <th>Descuento</th>
+                <th>Incremento</th>
+                <th>Precio Pagar</th>
+            </thead>
+            <tbody id="mainForm_dataLibros"></tbody>
+        </table>
+        <div class="divBotones">
+            <button id="mainForm_btAgregarLibroNino">+Agregar Libro Niño</button>
+            <button id="mainForm_btAgregarLibroAdolescente">+Agregar Libro Adolescente</button>
+        </div>
+        <h3>Resultados Procesados</h3>
+        <div class="divSalida">
+            <label>Libros Ilustrados: <span id="mainForm_lblTotalLibrosIlustrados"></span></label>
+            <label>Total Vendido Libros Ilustrados: <span id="mainForm_lblTotalIlustrados"></span></label>
+            <label>Precio Promedio Libros Ilustrados: <span id="mainForm_lblPrecioPromedioIlustrados"></span></label>
+            <label>Libros Precio Mayor 100$: <span id="mainForm_lblLibrosMayor100"></span></label>
+            <label>Cantidad de Libros: <span id="mainForm_lblCantidadLibros"></span></label>
+            <label>Porcentaje Libros Mayor 100$: <span id="mainForm_lblPorcentajeLibrosMayor100"></span></label>
+        </div>
+    </section>
+
+    <script type="module">
+        import Cl_principal from "./dist/Cl_principal.js";
+        new Cl_principal();
+    </script>
+</body>
+</html>

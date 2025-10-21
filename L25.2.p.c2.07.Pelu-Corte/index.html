@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelu-Corte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="clienteForm">
+        <h3 style="width: 250px;">Cliente: <span id="clienteForm_lblTipo"></span></h3>
+        <label>Cedula:
+            <input type="text" id="clienteForm_inCedula" />
+        </label>
+        <label>Servicios:
+            <input type="number" id="clienteForm_inServicio" />
+        </label>
+        <label hidden id="clienteForm_divInExtension">Extension:
+            <input type="text" id="clienteForm_inExtension" />
+        </label>
+        <label hidden id="clienteForm_divInPermanente">Permanente: 
+            <input type="text" id="clienteForm_inPermanente"/>
+        </label>
+        <div>
+            <button id="clienteForm_btAceptarCabelloCorto">Aceptar</button>
+            <button id="clienteForm_btAceptarCabelloLargo">Aceptar</button>
+            <button id="clienteForm_btCancelar">Cancelar</button>
+        </div>
+    </section>
+
+    <section id="mainForm">
+        <h3>Clientes Procesados</h3>
+        <table>
+            <thead>
+                <th>Cedula</th>
+                <th>Tipo</th>
+                <th>Servicio</th>
+                <th>Extension</th>
+                <th>Permanente</th>
+                <th>Precio</th>
+                <th>PrecioExtension</th>
+                <th>PrecioPermanente</th>
+                <th>Descuento</th>
+                <th>MontoPagar</th>
+            </thead>
+            <tbody id="mainForm_dataClientes"></tbody>
+        </table>
+        <div class="divBotones">
+            <button id="mainForm_btAgregarCabelloCorto">+Cabello Corto</button>
+            <button id="mainForm_btAgregarCabelloLargo">+Cabello Largo</button>
+        </div>
+        <h3>Resultados Procesados</h3>
+        <div class="divSalida">
+            <label>Mayor Monto Pagado: <span id="mainForm_lblMayorMontoPagado"></span></label>
+        </div>
+    </section>
+
+    <script type="module">
+        import Cl_principal from "./dist/Cl_principal.js";
+        new Cl_principal();
+    </script>
+</body>
+</html>

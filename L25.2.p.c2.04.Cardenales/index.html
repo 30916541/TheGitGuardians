@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardenales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="jugadorForm">
+        <h3 style="width: 250px;">Jugador: <span id="jugadorForm_lblTipo"></span></h3>
+        <label>Numero Identificacion: 
+            <input type="number" id="jugadorForm_inNumeroIdentificacion" />
+        </label>
+        <label>Bateos: 
+            <input type="number" id="jugadorForm_inBateos" />
+        </label>
+        <label>Veces Al Bate: 
+            <input type="number" id="jugadorForm_inVecesAlBate" />
+        </label>
+        <label hidden id="jugadorForm_divInMensualidad">Mensualidad:
+            <input type="number" id="jugadorForm_inMensualidad" />
+        </label>
+        <label hidden id="jugadorForm_divInAnualidad">Anualidad:
+            <input type="number" id="jugadorForm_inAnualidad" />
+        </label>
+        <div>
+            <button id="jugadorForm_btAceptarCriollo">Aceptar</button>
+            <button id="jugadorForm_btAceptarImportado">Aceptar</button>
+            <button id="jugadorForm_btCancelar">Cancelar</button>
+        </div>
+    </section>
+
+    <section id="mainForm">
+        <h3>Jugadores Procesados</h3>
+        <table>
+            <thead>
+                <th>Numero Identificacion</th>
+                <th>Tipo</th>
+                <th>Bateos</th>
+                <th>Veces Al Bate</th>
+                <th>Mensualidad</th>
+                <th>Anualidad</th>
+                <th>Mensualidad Base</th>
+                <th>Avg.</th>
+                <th>Bonificacion</th>
+                <th>Pago Mensual</th>
+            </thead>
+            <tbody id="mainForm_dataJugadores"></tbody>
+        </table>
+        <div class="divBotones">
+            <button id="mainForm_btAgregarCriollo">+ Criollo</button>
+            <button id="mainForm_btAgregarImportado">+ Importado</button>
+        </div>
+        <h3>Resultados Procesados</h3>
+        <div class="divSalida">
+            <label>Monto Promedio Importados: <span id="mainForm_lblPromedioMensualImportado"></span></label>
+        </div>
+    </section>
+
+    <script type="module">
+        import Cl_principal from './dist/Cl_principal.js';
+        new Cl_principal();
+    </script>
+</body>
+</html>
