@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="personasForm">
+        <h3 style="width: 250px;">Personas: <span id="personasForm_lblTipo"></span></h3>
+        <label>
+            Cedula:
+            <input type="text" id="personasForm_inCedula">
+        </label>
+        <label>
+            Nombre:
+            <input type="text" id="personasForm_inNombre">
+        </label>
+        <label>
+            Edad:
+            <input type="number" id="personasForm_inEdad">
+        </label>
+        <label>
+            Sexo:
+            <input type="text" id="personasForm_inSexo">
+        </label>
+        <label>
+            Estado Civil:
+            <input type="number" id="personasForm_inEstadoCivil">
+        </label>
+        <div>
+            <button id="personasForm_btAceptarComerciante">Aceptar</button>
+            <button id="personasForm_btCancelar">Cancelar</button>
+        </div>
+    </section>
+    <section id="mainForm">
+        <h3>Personas Procesadas</h3>
+        <table>
+            <thead>
+                <th>Cedula</th>
+                <th>Nombre</th>
+                <th>Edad</th>
+                <th>Sexo</th>
+                <th>Estado Civil</th>
+                <th>Porcentaje Aprobado</th>
+            </thead>
+            <tbody id="mainForm_dataPersonas"></tbody>
+        </table>
+        <div class="divBotones">
+            <button id="mainForm_btAgregarComerciante">+Agregar Comerciante</button>
+        </div>
+        <h3>Resultados Procesados</h3>
+        <div class="divSalida">
+            <label>Creditos Aprobados por el Monto Completo: <span id="mainForm_lblCreditosAprobados"></span></label>
+            <label>Creditos Rechazados: <span id="mainForm_lblCreditosNoAprobados"></span></label>
+        </div>
+    </section>
+
+    <script type="module">
+        import Cl_principal from "./dist/Cl_principal.js";
+        new Cl_principal();
+    </script>
+</body>
+</html>
