@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOMETRÍA-2</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h2>GEOMETRÍA-2</h2>
+
+    <section id="figuraForm" hidden>
+        <h3 style="width: 250px;">Figura: <span id="figuraForm_lblTipo"></span></h3>
+        <label>Coordenada X:
+            <input type="number" id="figuraForm_inCoorX"></input>
+        </label>
+        <label>Coordenada Y:
+            <input type="number" id="figuraForm_inCoorY"></input>
+        </label>
+        <label hidden id="figuraForm_divInRadio">Radio:
+            <input type="number" id="figuraForm_inRadio"></input>
+        </label>
+        <div>
+            <button id="figuraForm_btAceptar" hidden>Aceptar</button>
+            <button id="figuraForm_btCancelar">Cancelar</button>
+        </div>
+    </section>
+
+    <section id="mainForm">
+        <h3>Figuras Procesadas</h3>
+        <table>
+            <thead>
+                <th>Coord X</th>
+                <th>Coord Y</th>
+                <th>Radio</th>
+                <th>Área</th>
+                <th>Perímetro</th>
+            </thead>
+            <tbody id="mainForm_dataFiguras"></tbody>
+        </table>
+        <div class="divBotones">
+            <button id="mainForm_btAgregarCirculo">+ Círculo</button>
+    </section>
+
+    <script type="module">
+        import Cl_principal from "./dist/Cl_principal.js";
+        new Cl_principal();
+    </script>
+</body>
+
+</html> 
